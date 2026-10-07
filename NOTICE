@@ -1,0 +1,29 @@
+ninjasignal
+Copyright 2026 Scott Gardner / Ninja Labz (ninja.ing)
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Intellectual-property boundary
+------------------------------
+This open-source client library contains NO Ninja Labs predictive-intelligence
+methods, models, correlation/inference algorithms, scoring, or systems. It only
+reads already-published outputs from the public Ninja Labs data feeds.
+
+The predictive-intelligence methods and systems that produce those outputs are
+proprietary to Ninja Labs and are patent-pending and/or patented. Nothing in this
+repository — neither the Apache-2.0 code license nor the CC-BY data license —
+grants any right, express or implied, to those methods, models, or systems, by
+license, estoppel, or otherwise.
+
+Licensing summary
+-----------------
+- This client CODE: Apache License 2.0 (patent grant limited to what this code
+  itself embodies — which is none of the proprietary methods).
+- The DATA served by the feeds: Creative Commons Attribution 4.0 (CC BY 4.0).
+  Attribute "Ninja Labs — ninjalabz.io".
+- The predictive METHODS/MODELS behind the data: proprietary, patent-pending.
+  NOT licensed by this repository.
+
+"Ninja Labs", "Ninja Signal", "ninja.ing" and associated marks are trademarks of
+their owner. This License does not grant permission to use those marks except as
+required for reasonable and customary use in describing the origin of the work.
