@@ -11,6 +11,7 @@ from __future__ import annotations
 import json
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 
 __all__ = ["Client", "NinjaSignalError"]
@@ -34,6 +35,11 @@ class Client:
     def __init__(self, base: str = DEFAULT_BASE, timeout: float = 15.0,
                  cache_ttl: float = 300.0, user_agent: str | None = None):
         self.base = base.rstrip("/")
+        # Honour the HTTPS-only contract: reject file://, ftp://, bare paths, etc.
+        # so a mistyped mirror can't turn into a local-file read or cleartext fetch.
+        scheme = urllib.parse.urlsplit(self.base).scheme
+        if scheme not in ("http", "https"):
+            raise ValueError(f"base must be an http(s) URL, got {base!r}")
         self.timeout = timeout
         self.cache_ttl = cache_ttl
         self.user_agent = user_agent or "ninjasignal-python"
@@ -96,7 +102,7 @@ class Client:
             return True
 
         out = [v for v in vics if keep(v)]
-        return out[:limit] if limit else out
+        return out[:limit] if limit is not None else out
 
     def monthly(self) -> list[dict]:
         """Per-month totals + top groups (the time series behind the trends)."""

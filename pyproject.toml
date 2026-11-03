@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ninjasignal"
-version = "0.1.0"
+version = "0.1.1"
 description = "Python client for Ninja Labz predictive threat intelligence — live ransomware groups, victims, and what the lab predicts next."
 readme = "README.md"
 requires-python = ">=3.9"
@@ -17,7 +17,6 @@ classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Information Technology",
   "Topic :: Security",
-  "License :: OSI Approved :: Apache Software License",
   "Programming Language :: Python :: 3",
   "Operating System :: OS Independent",
 ]

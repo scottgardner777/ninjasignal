@@ -22,7 +22,7 @@ __all__ = ["Client", "NinjaSignalError", "DEFAULT_BASE", "__version__",
            "groups", "group", "recent", "monthly", "predictions", "surging",
            "predict", "risk", "latest_month"]
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 _default: Client | None = None
 
